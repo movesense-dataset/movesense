@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="MM-Fit - the first dataset of full-body physical exercises captured by multiple time-synchronized wearable sensing devices">
+<meta name="keywords" content="multimodal dataset, donwload sensor data, wearable devices, deep learning, exercise recognition, repetition counting">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>MM-Fit - The dataset of full-body physical exercises captured by multiple time-synchronized wearable sensing devices</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/proj-style.css">
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.ed.ac.uk/sites/all/themes/uoe/favicon/favicon-32x32.png?t=qg2v5y" />
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<!-- Navigation Section -->
+
+<div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+     <div class="container">
+
+          <!-- navbar header -->
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <!--<a href="#" class="navbar-brand top-nav-collapse">Valentin Radu</a>-->
+          </div>
+
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="smoothScroll">About</a></li>
+                    <li><a href="#dataset" class="smoothScroll">Dataset</a></li>
+                    <li><a href="#exercises" class="smoothScroll">Exercises</a></li>
+                    <li><a href="#publications" class="smoothScroll">Publications</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
+               </ul>
+          </div>
+
+     </div>
+</div>
+
+
+<!-- Home Section -->
+
+<section id="home" class="parallax-section bg-light-blue">
+     <div class="container">
+          <div class="row">
+
+
+               <div class="col-md-2 col-sm-2" style="text-align:center;">
+                    <img src="images/logo-3.png" width="180px" />
+               </div>
+               <div class="col-md-10 col-sm-10">
+                    <div class="home-thumb">
+                         <div class="section-title">
+                              <h1><strong>MM-Fit Dataset</strong></h1>
+                              <h3>The first dataset of full-body physical exercises captured by multiple time-synchronized wearable sensing devices.</h3>                      
+                              
+                         </div>
+
+                    </div>
+               </div>
+
+
+          </div>
+     </div>
+</section>
+
+
+<!-- Dataset Section -->
+
+<section id="dataset" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="dataset-thumb">
+                         <div class="wow section-title"> <!-- data-wow-delay="0.2s" -->
+                              <!--<h1>Dataset</h1>-->
+                         </div>
+
+
+
+                         <div class="media">
+                              <div class="media-body">
+                                   <h3 class="media-heading"><b>Description:</b> This is a substantial collection of inertial sensor data from
+smartphones, smartwatches and earbuds worn by participants while performing full-body workouts, and time-synchronised
+multi-viewpoint RGB-D video, with 2D and 3D pose estimates.</h3>
+                                   
+                              </div>
+                         </div>
+
+
+                         <div class="media">
+                              <div class="media-body">
+                                   <h3 class="media-heading"><b>Devices and sensors:</b> 
+
+                                        <table class="devices">
+                                             <tr>
+                                                  <td style="width: 330px"><b>Device</b></td><td style="width: 330px"><b>Modalities</b></td><td style="width: 330px"><b>Frequency(Hz)</b></td>
+                                             </tr>
+                                             <tr>
+                                                  <td>camera: Orbbec Astra Pro</td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>RGB</td></tr>
+                                                            <tr><td>Depth</td></tr>
+                                                       </table>
+                                                  </td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>30</td></tr>
+                                                            <tr><td>30</td></tr>
+                                                       </table>
+                                                  </td>
+                                             </tr>
+                                             <tr>
+                                                  <td>earbud: eSense (Nokia Bell-Labs)</td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>Accelerometer</td></tr>
+                                                            <tr><td>Gyroscope</td></tr>
+                                                       </table>
+                                                  </td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>90</td></tr>
+                                                            <tr><td>90</td></tr>
+                                                       </table>
+                                                  </td>
+                                             </tr>
+                                             <tr>
+                                                  <td>2x smartwatches: Mobvoi TicWatch Pro</td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>Accelerometer</td></tr>
+                                                            <tr><td>Gyroscope</td></tr>
+                                                            <tr><td>Heart beats per minute </td></tr>
+                                                       </table>
+                                                  </td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>100</td></tr>
+                                                            <tr><td>100</td></tr>
+                                                            <tr><td>1</td></tr>
+                                                       </table>
+                                                  </td>
+                                             </tr>
+                                             <tr>
+                                                  <td> smartphone: Samsung S7</td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>Accelerometer</td></tr>
+                                                            <tr><td>Gyroscope</td></tr>
+                                                            <tr><td>Magnetometer</td></tr>
+                                                       </table>
+                                                  </td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>210</td></tr>
+                                                            <tr><td>210</td></tr>
+                                                            <tr><td>100</td></tr>
+                                                       </table>
+                                                  </td>
+                                             </tr>
+                                             <tr>
+                                                  <td> smartphone: Huawei P20</td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>Accelerometer</td></tr>
+                                                            <tr><td>Gyroscope</td></tr>
+                                                            <tr><td>Magnetometer</td></tr>
+                                                       </table>
+                                                  </td>
+                                                  <td>
+                                                       <table class="no-border">
+                                                            <tr><td>500</td></tr>
+                                                            <tr><td>500</td></tr>
+                                                            <tr><td>65</td></tr>
+                                                       </table>
+                                                  </td>
+                                             </tr>
+
+                                        </table>
+
+
+                                   </h3>
+                                   
+                              </div>
+                         </div>
+
+<!--
+                         <div class="media">
+                              <div class="media-body">
+                                   <h3 class="media-heading"><b>Data pre-processing:</b> Paste from text here</h3>
+                                   
+                              </div>
+                         </div>
+
+
+                         <div class="media">
+                              <div class="media-body">
+                                   <h3 class="media-heading"><b>Some statistics:</b> Paste from text here</h3>
+                                   
+                              </div>
+                         </div>
+
+-->
+
+
+                         <div class="media">
+                              <div class="media-body">
+                                   <h3 class="media-heading"><br/><b>&gt;&gt; <a href="https://s3.eu-west-2.amazonaws.com/vradu.uk/mm-fit.zip">DOWNLOAD</a> &lt;&lt;</b><br/></h3>
+                                   
+                              </div>
+                         </div>
+
+<h3>The code at <u><a href="https://github.com/KDMStromback/mm-fit">this repository</a></u> serves as an example of how to use the <b>MM-Fit</b> data set.</h3>
+
+<!--<h3>For easy distribution of the MM-Fit dataset, we do <b>not</b> include the large raw RGB+D videos in the download link. For access to those data modalities, please <a href="#contact"><u>contact us</u></a>.</h3>-->
+
+
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+<!-- Trillion Quotes Section -->
+
+<section id="quotes" class="parallax-section">
+     <div class="overlay"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.3s">Over 800 minutes of multimodal data</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.5s">From 5 time-synchronised sensing devices.</p>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+<!-- Exercises Section -->
+
+<section id="exercises" class="parallax-section bg-alice-blue color-white">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-10 col-sm-12">
+                    <div class="exercises-thumb">
+
+
+                         <div>
+                              <h2 class="exercises-h2">Exercises</h2>
+                         </div>
+
+
+                         <table>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/squats.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Squats</h3>
+                                             <p>The body is lowered at the hips from a standing position and then stands back up to complete a repetition. Hands are push in front for balancing.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/pushups.png" style="height: 85px" /></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Push-ups</h3>
+                                             <p>Legs extended back and balancing the straight body on hands and toes. The arms are flexed to alower and raise the body. Repetitions are counted when the body returns to the starting position.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/shoulders.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Dumbbell shoulder presses</h3>
+                                             <p>From a sitting pisition, the weights are pressed upwards until the arms are straight and the weights touch above the head.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/lunges.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Lunges</h3>
+                                             <p>One leg is positioned forward with knee bent and foot flat on the ground while the other leg is positioned behind. The position of the legs is repeatedly swapped.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/rows.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Standing dumbbell rows</h3>
+                                             <p>Slightly bent knees, hips pushed back, chest and head up. With elbows at a 60-degree angle, the dumbbells are raised up from the back muscles.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/situps.png" style="height: 85px" /></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Sit-ups</h3>
+                                             <p>Abdominal exercise done by lying on the back and lifting the torso with arms behind the head.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/triceps_2.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Dumbbell tricep extensions</h3>
+                                             <p>The weight is brought overhead, extending the arms straight. Keeping the shoulders still, the elbows are slowly bent, lowering the weight behind the head to where the arms are just lower than 90 degrees, elbows pointing forward.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/biceps_2.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Bicep curls</h3>
+                                             <p>Bicep curls with weights. Arms are alternated in lifting up the weight with the rest of the body remaining still.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/laterals.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Sitting dumbbell lateral raises</h3>
+                                             <p>Sitting with a dumbbell in each hand and straight back. Slowly lifting the weights out to the side until the arms are parallel with the floor.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+                              <tr>
+                                   <td class="media-object media-left"><img class="research-group-member" src="images/jacks1.png"/><img class="research-group-member" src="images/jacks2.png"/></td>
+                                   <td>
+                                        <div class="media-body">
+                                             <h3 class="media-heading">Jumping jacks</h3>
+                                             <p>Starting with the arms on the side and the legs brought together. By a jump into the air, simultaneously the legs are spread and the hands are pushed up to touch overhead. A repetition is completed with another jump returning to the starting position.</p>
+                                        </div>
+                                   </td>
+                              </tr>
+
+                         </table>
+
+
+
+                    </div>
+               </div>
+               <div class="hidden-sm hidden-xs col-md-2">
+                    <div class="devices-img"></div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+<!-- Publications Section -->
+
+<section id="publications" class="parallax-section">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-12 col-sm-12">
+                    <div class="publications-thumb">
+                         <div class="section-title">
+                              <h1>Publications</h1>
+                         </div>
+
+
+
+
+            <ul>
+
+
+               <table class="architecture">
+                    <tr>
+                         <td><a href="images/architecture.png"><img src="images/architecture.png"/></a></td><td>An overview of the proposed activity segmentation and exercise recognition approach. Stage 1: Learn modality-specific representations using a separate autoencoder for each device and modality. The layers of the inertial 1D convolutional autoencoder block are used to illustrate that separate autoencoders are used for each device and modality. Stage 2: Flatten and concatenate the modality-specific representations outputted by the encoder component of each unimodal autoencoder. Learn a shared cross-modal representation using a fully-connected multimodal autoencoder that attempts to reconstruct the original inputs from the shared representation. The output vector of the multimodal autoencoder is split along the concatenation indices, and fed to the decoder component of the corresponding unimodal autoencoder, to reconstruct the original input, and backpropagate the reconstruction loss. Stage 3: A fully-connected classifier is attached to the learnt shared cross-modal representation. The entire network is trained for the task of activity segmentation and exercise recognition, with the pretrained unimodal and multimodal autoencoder weights being fine-tuned.</td>
+                    </tr>
+               </table>
+<li>
+<b>[IMWUT'20] MM-Fit: Multimodal Deep Learning for Automatic Exercise Logging Across Sensing Devices</b><br/>
+David Strömbäck, Sangxia Huang, Valentin Radu<br/>
+In ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT): Volume 4 Issue 4, December 2020.<br/>
+[<a class="link1" href="">DOI</a>] [<a class="link1" href="http://vradu.uk/publications/UbiComp2020.pdf">PDF</a>] [<a href="http://vradu.uk/publications/imwut20.bib">bib</a>]
+</li>
+          </ul>
+
+
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+
+<!-- Exposure Section -->
+<!--
+<section id="experience" class="parallax-section">
+     <div class="container">
+          <div class="row">
+               <div class="experience-thumb section-title color-white">
+                    <h1>In the Media</h1>
+               </div>
+          </div>
+          <div class="row">
+
+               <div class="col-md-6 col-sm-12">
+                    <div class="color-white video bg-yellow">
+                         <iframe src="https://www.youtube.com/embed/47FW5Wpb7Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+               </div>
+
+               <div class="col-md-6 col-sm-12">
+                    <div class="color-white video bg-yellow">
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/E1kkgRCGvWc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+-->
+
+<!-- Contact Section -->
+
+<section id="contact" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="bg-dark col-md-12 col-sm-12">
+                    <div class="contact-thumb">
+
+                         <div class="contact-info">
+                              <h3 class="color-white">Contact</h3>
+                              <p>
+                                   <i class="fa fa-envelope-o"></i><br/> 
+                                   <a href="mailto:k.d.m.stromback@gmail.com">k.d.m.stromback@gmail.com</a><br/>
+                                   <a href="mailto:valentin.radu@sheffield.ac.uk">valentin.radu@sheffield.ac.uk</a>
+                              </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+
+
+<!-- Footer Section -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="footer-copyright">
+                         <p>Copyright &copy; 2020</p>
+                    </div>
+               </div>
+			
+		</div>
+	</div>
+</footer>
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
+
